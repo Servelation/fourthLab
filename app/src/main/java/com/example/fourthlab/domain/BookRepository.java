@@ -1,6 +1,7 @@
 package com.example.fourthlab.domain;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author anechaev
@@ -13,7 +14,7 @@ public class BookRepository {
 
     private BookRepository() {}
 
-    private final ArrayList<Book> mBooks = new ArrayList<Book>() {{
+    private final List<Book> mBooks = new ArrayList<Book>() {{
         add(new Book("Коллекционер",
             "Роман рассказывает историю безумного клерка Фредерика Клегга, попытавшегося добавить"
                 + " в свою коллекцию живого человека.", 250.0));
@@ -28,5 +29,5 @@ public class BookRepository {
 
     public Book getBook(int id) {return mBooks.get(id);}
 
-    public ArrayList<Book> getBooks() {return mBooks;}
+    public List<Book> getBooks() {return mBooks;}
 }
