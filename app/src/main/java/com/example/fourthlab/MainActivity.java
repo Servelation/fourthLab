@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements OnFragmentItemCli
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.action_cart) {
             container = findViewById(R.id.book_detail_container);
-            if (container != null) {
+            if (container != null) {// если альбомная ориентация
                 Fragment fragment = CartFragment.newInstance();
                 setFragment(fragment);
             } else {
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements OnFragmentItemCli
 
     @Override
     public void onFragmentItemClick(int id) {
-        if (container != null) {
+        if (container != null) { // если альбомная ориентация
             getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.book_detail_container, BookDetailFragment.newInstance(id))
